@@ -26,7 +26,7 @@ html {
   --big: calc(2.4rem + 1vw);
   --special-color: #906272;
   --background-color: #414141;
-  --gray-text: rgb(58, 138, 44);
+  --gray-text: #525252;
 }
 
 h1 {
@@ -113,6 +113,7 @@ nav {
 }
 .hero-introduction p {
   padding: 5rem 10rem;
+  color: var(--gray-text);
 }
 .hero-introduction h2 {
   padding-top: 3rem;
@@ -125,7 +126,7 @@ nav {
 
 .hero-images {
   flex: 1 1 40rem;
-  background: linear-gradient(#e2e075, #dad1d4);
+  background: linear-gradient(#dddb81, #dad1d4);
   position: relative;
   z-index: 1;
 }
@@ -148,11 +149,6 @@ nav {
 }
 .plant2 {
   left: 40%;
-}
-
-.burger,
-.menu-check {
-  display: none;
 }
 
 /* ANIMATIONS */
@@ -180,7 +176,52 @@ nav {
     transform: rotateZ(0deg);
   }
 }
+.burger,
+.menu-check {
+  display: none;
+}
 
+/* About Section */
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-text {
+  color: white;
+  background: rgba(11, 54, 3, 0.85);
+  flex: 2 1 40rem;
+  justify-content: space-around;
+}
+.about-text div {
+  padding: 3rem 8rem;
+}
+.about-text h2 {
+  font-family: "Vibes";
+  padding: 4rem;
+}
+
+.about-text h3 {
+  padding: 2rem 0rem;
+  font-family: "Ruhl Medium";
+}
+
+.about-image {
+  flex: 1 1 40rem;
+  position: relative;
+}
+.about-image h5 {
+  position: absolute;
+  letter-spacing: 2rem;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+.about-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 @media screen and (max-width: 842px) {
   .hero {
     width: 100%;
@@ -194,7 +235,7 @@ nav {
   }
   .burger span {
     padding: 0.2rem 2rem;
-    background: var(--gray-text);
+    background: rgb(58, 138, 44);
     margin: 0.5rem 0rem;
     display: block;
     transition: all 0.5s ease;
@@ -241,5 +282,8 @@ nav {
   }
   .menu-check:checked ~ .burger span:nth-child(3) {
     transform: rotateZ(-45deg) translateY(-300%);
+  }
+  .about-text div {
+    padding: 3rem 3rem;
   }
 }
